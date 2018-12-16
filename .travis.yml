@@ -14,3 +14,8 @@ after_success:
   - docker build -t blackjack1994/muti-server ./server
   - docker build -t blackjack1994/multi-worker ./worker
   # Log in docker hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push blackjack1994/multi-react
+  - docker push blackjack1994/multi-nginx
+  - docker push blackjack1994/muti-server
+  - docker push blackjack1994/multi-worker
