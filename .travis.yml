@@ -19,3 +19,4 @@ after_success:
   - docker push blackjack1994/multi-nginx
   - docker push blackjack1994/muti-server
   - docker push blackjack1994/multi-worker
+  
